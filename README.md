@@ -27,13 +27,14 @@
   * PJT.1_dev - 개발 브랜치
   * PJT.1_master - 마지막 MR 후, 태깅해서 제출
 
-  
+
+<br>
 
 * DB 연결 웹 앱  Branch
   * PJT.2_dev - 개발 브랜치
   * PJT.2_master - 마지막 MR 후, 태깅해서 제출
 
-
+<br>
 
 * 웹 앱 개발: 예약서비스  Branch
   * PJT.3_dev - 개발 브랜치
