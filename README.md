@@ -1,3 +1,21 @@
+# PJT3. 예약 시스템
+
+## 일정 관리
+
+이번 프로젝트부터는 트렐로를 사용하여 일정관리를 진행한다.
+
+초기 일정은 대분류로 잡고 subTask로 추가할 예정이다.
+
+[8.2 ~ 8.6 TODO📚] 부분에 리팩토링은 새일정으로 넣는다.
+
+![image-20210729111401963](README.assets/image-20210729111401963.png)
+
+<a href="https://trello.com/invite/b/s7hPrEzk/ea484303360596b468773c23f722e6a2/pjt3" style="font-size:24px; font-weight:550; color: #2DB400;">프로젝트 트렐로 보기</a>
+
+
+
+
+
 # 2021 NTS 인턴쉽 Project
 
 부스트코스 + 깃랩 + 코드리뷰를 통한 공통 프로젝트 8주간 진행
