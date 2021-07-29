@@ -866,7 +866,8 @@ button {
 
 .gototop .lnk_top {
     color: #000;
-    text-align: center
+    text-align: center;
+    cursor: pointer;
 }
 
 .gototop {
