@@ -39,7 +39,7 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
 	@Bean
 	public InternalResourceViewResolver getInternalResourceViewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setPrefix("/htmls/");
+		resolver.setPrefix("/");
 		resolver.setSuffix(".html");
 		return resolver;
 	}
