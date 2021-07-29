@@ -57,7 +57,7 @@
       <version>1.2</version>
     </dependency>
     
-    <!-- DB -->
+    <!-- DB Json -->
     <dependency>
 	  <groupId>mysql</groupId>   
       <artifactId>mysql-connector-java</artifactId>
@@ -68,6 +68,16 @@
 	  <artifactId>commons-dbcp2</artifactId>
 	  <version>2.1.1</version>
 	</dependency>
+	<dependency>
+	  <groupId>com.fasterxml.jackson.core</groupId>
+	  <artifactId>jackson-databind</artifactId>
+	  <version>2.9.4</version>
+    </dependency>
+    <dependency>
+	  <groupId>com.fasterxml.jackson.datatype</groupId>
+	  <artifactId>jackson-datatype-jdk8</artifactId>
+	  <version>2.9.4</version>
+    </dependency>
   </dependencies>
 
   <build>

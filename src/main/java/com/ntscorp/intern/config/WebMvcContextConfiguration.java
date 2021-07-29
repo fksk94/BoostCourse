@@ -22,6 +22,7 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/img/**").addResourceLocations("/img/").setCachePeriod(31556926);
 		registry.addResourceHandler("/img_map/**").addResourceLocations("/img_map/").setCachePeriod(31556926);
 		registry.addResourceHandler("/font/**").addResourceLocations("/font/").setCachePeriod(31556926);
+		registry.addResourceHandler("/**").addResourceLocations("/htmls/").setCachePeriod(31556926);
 	}
 
 	// default servlet handler를 사용하게 합니다.
@@ -38,7 +39,7 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
 	@Bean
 	public InternalResourceViewResolver getInternalResourceViewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setPrefix("/WEB-INF/htmls/");
+		resolver.setPrefix("/htmls/");
 		resolver.setSuffix(".html");
 		return resolver;
 	}
