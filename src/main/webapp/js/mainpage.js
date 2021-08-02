@@ -44,7 +44,7 @@ fetch(URL.promotions)
       	return response.json();
     })
 	.then(data => {
-		displayPromotions(data.items);
+		displayPromotions(data.data);
 	})
     .catch(error => {
     	console.error(error);

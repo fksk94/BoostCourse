@@ -1,6 +1,6 @@
-package com.ntscorp.intern.promotion.repository.impl;
+package com.ntscorp.intern.product.repository.impl;
 
-import static com.ntscorp.intern.promotion.repository.sql.PromotionSql.*;
+import static com.ntscorp.intern.product.repository.sql.PromotionSql.*;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.ntscorp.intern.promotion.model.PromotionImage;
-import com.ntscorp.intern.promotion.repository.PromotionRepository;
+import com.ntscorp.intern.product.model.PromotionImage;
+import com.ntscorp.intern.product.repository.PromotionRepository;
 
 @Repository
 public class PromotionRepositoryImpl implements PromotionRepository {
@@ -24,7 +24,7 @@ public class PromotionRepositoryImpl implements PromotionRepository {
 	}
 
 	@Override
-	public List<PromotionImage> findImagesAll() {
-		return namedParameterJdbcTemplate.query(FIND_IMAGES_ALL, promotionImageRowMapper);
+	public List<PromotionImage> findAllImages() {
+		return namedParameterJdbcTemplate.query(FIND_ALL_IMAGES, promotionImageRowMapper);
 	}
 }

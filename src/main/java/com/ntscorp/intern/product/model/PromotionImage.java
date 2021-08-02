@@ -1,4 +1,4 @@
-package com.ntscorp.intern.promotion.model;
+package com.ntscorp.intern.product.model;
 
 public class PromotionImage {
 	private int id;
