@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/**.carousel {
+	animation-duration: 0.8s;
+  	animation-name: carousel;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate, reverse, normal;
+}
+
+@keyframes carousel {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}**/
+
+.background_image {
+	width: 100%;
+}

@@ -1,4 +1,4 @@
-package com.ntscorp.intern.controller;
+package com.ntscorp.intern.promotion.controller;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ntscorp.intern.model.PromotionImage;
-import com.ntscorp.intern.service.PromotionService;
+import com.ntscorp.intern.promotion.model.PromotionImage;
+import com.ntscorp.intern.promotion.service.PromotionService;
 
 @RestController
 @RequestMapping("/api")
