@@ -14,6 +14,7 @@ public class ProductSql {
 		+ "JOIN product_image AS pdt_img ON pdt_img.product_id = pdt.id AND pdt_img.type = 'th' "
 		+ "JOIN file_info AS fl ON fl.id = pdt_img.file_id "
 		+ "LIMIT :start, 4";
+
 	public static final String FIND_SUMMARIES_BY_CATEGORY_ID = ""
 		+ "SELECT "
 		+ "pdt.id, "
@@ -28,4 +29,15 @@ public class ProductSql {
 		+ "JOIN file_info AS fl ON fl.id = pdt_img.file_id "
 		+ "WHERE pdt.category_id = :categoryId "
 		+ "LIMIT :start, 4";
+
+	public static final String COUNT_SUMMARIES_BY_CATEGORY_ID = ""
+		+ "SELECT COUNT(*) AS total_count "
+		+ "FROM product AS pdt "
+		+ "JOIN display_info AS dpl ON pdt.id = dpl.product_id "
+		+ "WHERE category_id = :categoryId";
+
+	public static final String COUNT_ALL_SUMMARIES = ""
+		+ "SELECT COUNT(*) AS total_count "
+		+ "FROM product AS pdt "
+		+ "JOIN display_info AS dpl ON pdt.id = dpl.product_id";
 }

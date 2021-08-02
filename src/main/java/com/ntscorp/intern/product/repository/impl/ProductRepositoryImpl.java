@@ -33,10 +33,22 @@ public class ProductRepositoryImpl implements ProductRepository {
 	}
 
 	@Override
+	public int countAllSummaries() {
+		Map<String, ?> param = new HashMap<>();
+		return namedParameterJdbcTemplate.queryForObject(COUNT_ALL_SUMMARIES, param, Integer.class);
+	}
+
+	@Override
 	public List<ProductSummary> findSummariesByCategoryId(Integer categoryId, Integer start) {
 		Map<String, Object> params = new HashMap<>();
 		params.put("categoryId", categoryId);
 		params.put("start", start);
 		return namedParameterJdbcTemplate.query(FIND_SUMMARIES_BY_CATEGORY_ID, params, productSummaryRowMapper);
+	}
+
+	@Override
+	public int countSummariesByCategoryId(Integer categoryId) {
+		Map<String, ?> param = Collections.singletonMap("categoryId", categoryId);
+		return namedParameterJdbcTemplate.queryForObject(COUNT_SUMMARIES_BY_CATEGORY_ID, param, Integer.class);
 	}
 }

@@ -1,6 +1,8 @@
 package com.ntscorp.intern.product.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -75,14 +77,21 @@ public class MainController {
 		}
 
 		List<ProductSummary> productSummaries;
+		int totalCount;
 
 		if (categoryId == null) {
 			productSummaries = productService.findAllProductSummaries(start);
+			totalCount = productService.countAllProductSummaries();
 		} else {
 			productSummaries = productService.findProductSummariesByCategoryId(categoryId, start);
+			totalCount = productService.countProductSummariesByCategoryId(categoryId);
 		}
 
-		response.setData(productSummaries);
+		Map<String, Object> products = new HashMap<>();
+		products.put("totalCount", totalCount);
+		products.put("products", productSummaries);
+
+		response.setData(products);
 		response.setStatus(200);
 		response.setMessage(null);
 

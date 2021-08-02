@@ -8,4 +8,8 @@ public interface ProductRepository {
 	public List<ProductSummary> findAllSummaries(Integer start);
 
 	public List<ProductSummary> findSummariesByCategoryId(Integer categoryId, Integer start);
+
+	public int countAllSummaries();
+
+	public int countSummariesByCategoryId(Integer categoryId);
 }

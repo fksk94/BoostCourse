@@ -43,4 +43,14 @@ public class ProductServiceImpl implements ProductService {
 
 		return productSummaries;
 	}
+
+	@Override
+	public int countAllProductSummaries() {
+		return productRepository.countAllSummaries();
+	}
+
+	@Override
+	public int countProductSummariesByCategoryId(Integer categoryId) {
+		return productRepository.countSummariesByCategoryId(categoryId);
+	}
 }
