@@ -6,15 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ntscorp.intern.product.model.PromotionImage;
-import com.ntscorp.intern.product.repository.impl.PromotionRepositoryImpl;
+import com.ntscorp.intern.product.repository.PromotionRepository;
 import com.ntscorp.intern.product.service.PromotionService;
 
 @Service
 public class PromotionServiceImpl implements PromotionService {
-	private final PromotionRepositoryImpl promotionRepository;
+	private final PromotionRepository promotionRepository;
 
 	@Autowired
-	public PromotionServiceImpl(PromotionRepositoryImpl promotionRepository) {
+	public PromotionServiceImpl(PromotionRepository promotionRepository) {
 		this.promotionRepository = promotionRepository;
 	}
 
