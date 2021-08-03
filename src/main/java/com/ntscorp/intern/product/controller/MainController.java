@@ -19,6 +19,7 @@ import com.ntscorp.intern.product.model.PromotionImage;
 import com.ntscorp.intern.product.service.CategoryService;
 import com.ntscorp.intern.product.service.ProductService;
 import com.ntscorp.intern.product.service.PromotionService;
+import com.ntscorp.intern.product.type.CustomHttpStatus;
 
 @RestController
 @RequestMapping("/api")
@@ -44,8 +45,8 @@ public class MainController {
 
 		DefaultResponse response = new DefaultResponse();
 		response.setData(promotionImages);
-		response.setStatus(200);
-		response.setMessage(null);
+		response.setStatus(CustomHttpStatus.OK.getCode());
+		response.setMessage(CustomHttpStatus.OK.getMessage());
 
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
@@ -56,8 +57,8 @@ public class MainController {
 
 		DefaultResponse response = new DefaultResponse();
 		response.setData(categories);
-		response.setStatus(200);
-		response.setMessage(null);
+		response.setStatus(CustomHttpStatus.OK.getCode());
+		response.setMessage(CustomHttpStatus.OK.getMessage());
 
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
@@ -71,8 +72,8 @@ public class MainController {
 		DefaultResponse response = new DefaultResponse();
 
 		if (isNotValidateproducts(categoryId, start)) {
-			response.setStatus(400);
-			response.setMessage(null);
+			response.setStatus(CustomHttpStatus.IS_NOT_VALIDATED.getCode());
+			response.setMessage(CustomHttpStatus.IS_NOT_VALIDATED.getMessage());
 			return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
 		}
 
@@ -92,8 +93,8 @@ public class MainController {
 		products.put("products", productSummaries);
 
 		response.setData(products);
-		response.setStatus(200);
-		response.setMessage(null);
+		response.setStatus(CustomHttpStatus.OK.getCode());
+		response.setMessage(CustomHttpStatus.OK.getMessage());
 
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
