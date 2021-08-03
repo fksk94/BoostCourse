@@ -3150,15 +3150,15 @@ button {
     overflow-y: hidden;
     overflow-x: auto;
     position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 0px;
     padding-bottom: 5px;
     white-space: nowrap;
     word-wrap: normal;
     -webkit-overflow-scrolling: touch
 }
 
-.event .section_event_tab .event_tab_lst>.item {
+.event .section_event_tab .event_tab_lst .item {
     display: inline-block;
     font-size: 16px;
     text-align: center;
