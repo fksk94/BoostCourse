@@ -1,4 +1,5 @@
 import { BASE_URL, URL } from "./urlMapper.js";
+import { getCookie } from "./cookie.js";
 
 // ---------- 함수 영역 시작 ------------------
 
@@ -249,6 +250,20 @@ moreButton.addEventListener("click", () => {
 	    })
 	
 })
+
+// 비회원 로그인 되어 있는지 확인 후, 링크 주소 변경 및 유지 & 기본 쿠키 지속시간 1시간
+const reservationCheckButton = document.getElementsByClassName("btn_my")[0];
+const loginEmail = getCookie("email");
+
+if (loginEmail) {
+	reservationCheckButton.href = BASE_URL + "myreservation.html"
+	const reservationEmailBox = reservationCheckButton.getElementsByClassName("viewReservation")[0];
+	reservationEmailBox.innerText = loginEmail;
+} else {
+	reservationCheckButton.href = BASE_URL + "bookinglogin.html"
+	const reservationEmailBox = reservationCheckButton.getElementsByClassName("viewReservation")[0];
+	reservationEmailBox.innerText = "예약확인";
+}
 
 // TOP 버튼 누를 시, 화면 상단으로 이동
 const moveToTopButton = document.getElementsByClassName("lnk_top")[0];
